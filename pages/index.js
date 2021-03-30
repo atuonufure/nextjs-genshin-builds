@@ -1,65 +1,69 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from "react";
+import Character from "../components/Character";
+import styles from "../styles/Home.module.css";
+
+const arrayOfElements = ["Все элементы", "Анемо", "Крио", "Электро", "Гео", "Гидро", "Пиро"];
+
+const arrayOfWeapons = ["Всё оружие", "Одноручный меч", "Двуручный меч", "Копье", "Катализатор", "Лук"];
+
+const characters = [
+  { id: 0, name: "Гань Юй", element: "Крио", weapon: "Лук" },
+  { id: 1, name: "Аяка", element: "Крио", weapon: "Одноручный меч" },
+  { id: 2, name: "Фишль", element: "Электро", weapon: "Лук" },
+];
 
 export default function Home() {
+  const [activeElement, setActiveElement] = React.useState("Все элементы");
+  const [activeWeapon, setActiveWeapon] = React.useState("Всё оружие");
+
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+      <h1>Genshin Impact - сборки персонажей</h1>
+      <nav className={styles.weaponBar}>
+        {arrayOfElements.map((element, index) => {
+          return (
+            <div
+              key={index}
+              className={activeElement === element ? `${styles.element} ${styles.active}` : `${styles.element}`}
+              onClick={() => setActiveElement(element)}
+            >
+              {element}
+            </div>
+          );
+        })}
+      </nav>
+      <nav className={styles.weaponBar}>
+        {arrayOfWeapons.map((weapon, index) => {
+          return (
+            <div
+              key={index}
+              className={activeWeapon === weapon ? `${styles.weapon} ${styles.active}` : `${styles.weapon}`}
+              onClick={() => setActiveWeapon(weapon)}
+            >
+              {weapon}
+            </div>
+          );
+        })}
+      </nav>
+      <main>
+        {characters.map((character, index) => {
+          if (activeElement === "Все элементы" && activeWeapon === "Всё оружие") {
+            return (
+              <div key={index} onClick={() => console.log("test")}>
+                <Character character={character} />
+              </div>
+            );
+          }
+          if (activeElement === character.element && activeWeapon === "Всё оружие") {
+            return <Character key={index} character={character} />;
+          }
+          if (activeElement === "Все элементы" && activeWeapon === character.weapon) {
+            return <Character key={index} character={character} />;
+          }
+          if (activeElement === character.element && activeWeapon === character.weapon)
+            return <Character key={index} character={character} />;
+        })}
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
-  )
+  );
 }
