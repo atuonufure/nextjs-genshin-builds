@@ -1,226 +1,138 @@
 [
   {
-    "name": "Jean",
-    "element": "Anemo",
-    "type": "character",
-    "rating": 5,
+    "id": 0,
+    "name": "Гань Юй",
+    "element": "Крио",
+    "stars": 5,
+    "weapon": "Лук",
+    "extra": "Сила атаки % / Шанс крит. попадания / Крит. урон",
+    "build": {
+      "type": [
+        "Заблудший в метели",
+        "Конец гладиатора"
+      ],
+      "specifications": {
+        "HP": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки %",
+          "Сила атаки"
+        ],
+        "Сила атаки %": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки",
+          "Восст. энергии / Мастерство стихий"
+        ],
+        "Сила атаки": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки %",
+          "Восст. энергии / Мастерство стихий"
+        ],
+        "Бонус Крио урона": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки %",
+          "Сила атаки"
+        ],
+        "Крит. урон / Шанс крит. попадания": [
+          "Крит. урон / Шанс крит. попадания",
+          "Сила атаки %",
+          "Сила атаки",
+          "Восст. энергии / Мастерство стихий"
+        ]
+      }
+    }
+  },
+  {
     "id": 1,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Jean.png"
+    "name": "Аяка",
+    "element": "Крио",
+    "weapon": "Одноручный меч",
+    "extra": "Сила атаки % / Шанс крит. попадания / Крит. урон",
+    "build": {
+      "type": [
+        "Заблудший в метели",
+        "Конец гладиатора"
+      ],
+      "specifications": {
+        "HP": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки %",
+          "Сила атаки"
+        ],
+        "Сила атаки %": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки",
+          "Восст. энергии / Мастерство стихий"
+        ],
+        "Сила атаки": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки %",
+          "Восст. энергии / Мастерство стихий"
+        ],
+        "Бонус Крио урона": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки %",
+          "Сила атаки"
+        ],
+        "Крит. урон / Шанс крит. попадания": [
+          "Крит. урон / Шанс крит. попадания",
+          "Сила атаки %",
+          "Сила атаки",
+          "Восст. энергии / Мастерство стихий"
+        ]
+      }
+    }
   },
   {
-    "name": "Amber",
-    "element": "Pyro",
-    "type": "character",
-    "rating": 4,
     "id": 2,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Amber.png"
-  },
-  {
-    "name": "Lisa",
-    "element": "Electro",
-    "type": "character",
-    "rating": 4,
-    "id": 3,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Lisa.png"
-  },
-  {
-    "name": "Kaeya",
-    "element": "Cryo",
-    "type": "character",
-    "rating": 4,
-    "id": 4,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Kaeya.png"
-  },
-  {
-    "name": "Barbara",
-    "element": "Hydro",
-    "type": "character",
-    "rating": 4,
-    "id": 5,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Barbara.png"
-  },
-  {
-    "name": "Diluc",
-    "element": "Pyro",
-    "type": "character",
-    "rating": 5,
-    "id": 6,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Diluc.png"
-  },
-  {
-    "name": "Razor",
-    "element": "Electro",
-    "type": "character",
-    "rating": 4,
-    "id": 7,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Razor.png"
-  },
-  {
-    "name": "Venti",
-    "element": "Anemo",
-    "type": "character",
-    "rating": 5,
-    "id": 8,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Venti.png"
-  },
-  {
-    "name": "Klee",
-    "element": "Pyro",
-    "type": "character",
-    "rating": 5,
-    "id": 9,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Klee.png"
-  },
-  {
-    "name": "Bennett",
-    "element": "Pyro",
-    "type": "character",
-    "rating": 4,
-    "id": 10,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Bennett.png"
-  },
-  {
-    "name": "Noelle",
-    "element": "Geo",
-    "type": "character",
-    "rating": 4,
-    "id": 11,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Noelle.png"
-  },
-  {
-    "name": "Fischl",
-    "element": "Electro",
-    "type": "character",
-    "rating": 4,
-    "id": 12,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Fischl.png"
-  },
-  {
-    "name": "Sucrose",
-    "element": "Anemo",
-    "type": "character",
-    "rating": 4,
-    "id": 13,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Sucrose.png"
-  },
-  {
-    "name": "Mona",
-    "element": "Hydro",
-    "type": "character",
-    "rating": 5,
-    "id": 14,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Mona.png"
-  },
-  {
-    "name": "Xiao",
-    "element": "Anemo",
-    "type": "character",
-    "rating": 5,
-    "id": 15,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Xiao.png"
-  },
-  {
-    "name": "Beidou",
-    "element": "Electro",
-    "type": "character",
-    "rating": 4,
-    "id": 16,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Beidou.png"
-  },
-  {
-    "name": "Ningguang",
-    "element": "Electro",
-    "type": "character",
-    "rating": 4,
-    "id": 17,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Ningguang.png"
-  },
-  {
-    "name": "Xiangling",
-    "element": "Pyro",
-    "type": "character",
-    "rating": 4,
-    "id": 18,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Xiangling.png"
-  },
-  {
-    "name": "Xingqiu",
-    "element": "Hydro",
-    "type": "character",
-    "rating": 4,
-    "id": 19,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Xingqiu.png"
-  },
-  {
-    "name": "Chongyun",
-    "element": "Cryo",
-    "type": "character",
-    "rating": 4,
-    "id": 20,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Chongyun.png"
-  },
-  {
-    "name": "Qiqi",
-    "element": "Cryo",
-    "type": "character",
-    "rating": 5,
-    "id": 21,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Qiqi.png"
-  },
-  {
-    "name": "Keqing",
-    "element": "Electro",
-    "type": "character",
-    "rating": 5,
-    "id": 22,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Keqing.png"
-  },
-  {
-    "name": "Tartaglia",
-    "element": "Hydro",
-    "type": "character",
-    "rating": 5,
-    "id": 23,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Tartaglia.png"
-  },
-  {
-    "name": "Diona",
-    "element": "Cryo",
-    "type": "character",
-    "rating": 4,
-    "id": 24,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Diona.png"
-  },
-  {
-    "name": "Zhongli",
-    "element": "Geo",
-    "type": "character",
-    "rating": 5,
-    "id": 25,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Zhongli.png"
-  },
-  {
-    "name": "Xinyan",
-    "element": "Pyro",
-    "type": "character",
-    "rating": 4,
-    "id": 26,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Xinyan.png"
-  },
-  {
-    "name": "Albedo",
-    "element": "Geo",
-    "type": "character",
-    "rating": 5,
-    "id": 27,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Albedo.png"
-  },
-  {
-    "name": "Ganyu",
-    "element": "Cryo",
-    "type": "character",
-    "rating": 5,
-    "id": 28,
-    "avatar": "https://rerollcdn.com/GENSHIN/Characters/Ganyu.png"
+    "name": "Фишль",
+    "element": "Электро",
+    "weapon": "Лук",
+    "extra": "Сила атаки % / Шанс крит. попадания / Крит. урон",
+    "build": {
+      "type": [
+        "Громогласный рёв ярости",
+        "Конец гладиатора"
+      ],
+      "specifications": {
+        "HP": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки %",
+          "Сила атаки"
+        ],
+        "Сила атаки %": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки",
+          "Восст. энергии / Мастерство стихий"
+        ],
+        "Сила атаки": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки %",
+          "Восст. энергии / Мастерство стихий"
+        ],
+        "Бонус Электро урона": [
+          "Шанс крит. попадания",
+          "Крит. урон",
+          "Сила атаки %",
+          "Сила атаки"
+        ],
+        "Крит. урон / Шанс крит. попадания": [
+          "Крит. урон / Шанс крит. попадания",
+          "Сила атаки %",
+          "Сила атаки",
+          "Восст. энергии / Мастерство стихий"
+        ]
+      }
+    }
   }
 ]

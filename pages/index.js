@@ -1,16 +1,13 @@
 import React from "react";
-import Character from "../components/Character";
-import styles from "../styles/Home.module.css";
+import CharacterItem from "../components/CharacterItem";
+
+import characters from "../data/characters.json";
+
+import styles from "../styles/index.module.css";
 
 const arrayOfElements = ["Все элементы", "Анемо", "Крио", "Электро", "Гео", "Гидро", "Пиро"];
 
 const arrayOfWeapons = ["Всё оружие", "Одноручный меч", "Двуручный меч", "Копье", "Катализатор", "Лук"];
-
-const characters = [
-  { id: 0, name: "Гань Юй", element: "Крио", weapon: "Лук" },
-  { id: 1, name: "Аяка", element: "Крио", weapon: "Одноручный меч" },
-  { id: 2, name: "Фишль", element: "Электро", weapon: "Лук" },
-];
 
 export default function Home() {
   const [activeElement, setActiveElement] = React.useState("Все элементы");
@@ -49,19 +46,19 @@ export default function Home() {
         {characters.map((character, index) => {
           if (activeElement === "Все элементы" && activeWeapon === "Всё оружие") {
             return (
-              <div key={index} onClick={() => console.log("test")}>
-                <Character character={character} />
+              <div key={index}>
+                <CharacterItem character={character} />
               </div>
             );
           }
           if (activeElement === character.element && activeWeapon === "Всё оружие") {
-            return <Character key={index} character={character} />;
+            return <CharacterItem key={index} character={character} />;
           }
           if (activeElement === "Все элементы" && activeWeapon === character.weapon) {
-            return <Character key={index} character={character} />;
+            return <CharacterItem key={index} character={character} />;
           }
           if (activeElement === character.element && activeWeapon === character.weapon)
-            return <Character key={index} character={character} />;
+            return <CharacterItem key={index} character={character} />;
         })}
       </main>
     </div>
