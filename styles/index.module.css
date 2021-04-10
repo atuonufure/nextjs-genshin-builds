@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.elementBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.element {
+  margin: 1vh;
+  cursor: pointer;
+}
+
+.weaponBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.weapon {
+  margin: 1vh;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 700;
+}
