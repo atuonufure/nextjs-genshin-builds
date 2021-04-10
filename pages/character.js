@@ -1,9 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-
-import styles from "../styles/characters.module.css";
 import CharacterInfo from "../components/CharacterInfo";
+import styles from "../styles/characters.module.css";
 
 const character = () => {
   const router = useRouter();

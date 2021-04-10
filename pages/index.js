@@ -1,9 +1,9 @@
 import React from "react";
 import CharacterItem from "../components/CharacterItem";
-
-import characters from "../data/characters.json";
-
 import styles from "../styles/index.module.css";
+
+// временно
+import data from "../public/db.json";
 
 const arrayOfElements = ["Все элементы", "Анемо", "Крио", "Электро", "Гео", "Гидро", "Пиро"];
 
@@ -43,7 +43,7 @@ export default function Home() {
         })}
       </nav>
       <main>
-        {characters.map((character, index) => {
+        {data.map((character, index) => {
           if (activeElement === "Все элементы" && activeWeapon === "Всё оружие") {
             return (
               <div key={index}>
