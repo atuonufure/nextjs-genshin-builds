@@ -2,14 +2,11 @@ import React from "react";
 import CharacterItem from "../components/CharacterItem";
 import styles from "../styles/index.module.css";
 
-// временно
-import data from "../public/db.json";
-
 const arrayOfElements = ["Все элементы", "Анемо", "Крио", "Электро", "Гео", "Гидро", "Пиро"];
 
 const arrayOfWeapons = ["Всё оружие", "Одноручный меч", "Двуручный меч", "Копье", "Катализатор", "Лук"];
 
-export default function Home() {
+export default function Home({ data }) {
   const [activeElement, setActiveElement] = React.useState("Все элементы");
   const [activeWeapon, setActiveWeapon] = React.useState("Всё оружие");
 

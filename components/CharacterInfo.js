@@ -1,9 +1,7 @@
 import React from "react";
 import BuildType from "./BuildType";
-// временно
-import data from "../public/db.json";
 
-const CharacterInfo = ({ name }) => {
+const CharacterInfo = ({ name, data }) => {
   const character = data.find((item) => item.name === name);
   return (
     <div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import CharacterInfo from "../components/CharacterInfo";
 import styles from "../styles/characters.module.css";
 
-const character = () => {
+const character = ({ data }) => {
   const router = useRouter();
   const { name } = router.query;
 
@@ -20,7 +20,7 @@ const character = () => {
         </a>
       </Link>
       <div>
-        <CharacterInfo name={name} />
+        <CharacterInfo name={name} data={data} />
       </div>
     </div>
   );
