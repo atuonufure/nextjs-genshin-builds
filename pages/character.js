@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import CharacterInfo from "../components/CharacterInfo";
-import styles from "../styles/characters.module.css";
+import styles from "../styles/character.module.css";
 
 const character = ({ data }) => {
   const router = useRouter();
