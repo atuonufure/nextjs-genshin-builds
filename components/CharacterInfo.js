@@ -1,5 +1,6 @@
 import React from "react";
 import BuildType from "./BuildType";
+import Artefacts from "./Artefacts";
 
 const CharacterInfo = ({ name, data }) => {
   const character = data.find((item) => item.name === name);
@@ -11,13 +12,16 @@ const CharacterInfo = ({ name, data }) => {
       <div>Оружие: {character.weapon}</div>
       <div>-----</div>
       <div>Дополнительная характеристика оружия:</div>
-      <div>{character.extra}</div>
+      <div>
+        {character.extra.map((item, key) => (
+          <span key={key}>{item}; </span>
+        ))}
+      </div>
       <div>-----</div>
       <div>Комплект артефактов:</div>
       <BuildType buildType={character.build.type} />
-      <div>-----</div>
-      <div>Бонусы артефатов:</div>
-      <div>in the pipeline</div>
+      <h2>Бонусы артефатов:</h2>
+      <Artefacts artefacts={character.build.specifications} />
     </div>
   );
 };
