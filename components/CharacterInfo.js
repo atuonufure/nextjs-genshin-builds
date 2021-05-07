@@ -7,21 +7,19 @@ const CharacterInfo = ({ name, data }) => {
   return (
     <div>
       <h1>{name}</h1>
-      <div>{character.stars} ★</div>
-      <div>Элемент: {character.element}</div>
-      <div>Оружие: {character.weapon}</div>
+      <div>{character ? character.stars : null} ★</div>
+      <div>Элемент: {character ? character.element : null}</div>
+      <div>Оружие: {character ? character.weapon : null}</div>
       <div>-----</div>
       <div>Дополнительная характеристика оружия:</div>
       <div>
-        {character.extra.map((item, key) => (
-          <span key={key}>{item}; </span>
-        ))}
+        {character ? character.extra.map((item, key) => <span key={key}>{item}; </span>) : null}
       </div>
       <div>-----</div>
       <div>Комплект артефактов:</div>
-      <BuildType buildType={character.build.type} />
+      <BuildType buildType={character ? character.build.type : null} />
       <h2>Бонусы артефатов:</h2>
-      <Artefacts artefacts={character.build.specifications} />
+      <Artefacts artefacts={character ? character.build.specifications : null} />
     </div>
   );
 };
